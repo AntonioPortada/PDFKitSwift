@@ -31,12 +31,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ver PDF" id="1Gw-rA-Zvd">
-                        <barButtonItem key="leftBarButtonItem" title="Orientación" id="oPz-PK-tTv"/>
+                        <barButtonItem key="leftBarButtonItem" title="Orientación" id="oPz-PK-tTv">
+                            <connections>
+                                <action selector="btnOrientacionAction:" destination="BYZ-38-t0r" id="1gy-jl-RRl"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Ajustar" id="a0r-wT-59R"/>
-                            <barButtonItem title="Item" image="scale.3d" catalog="system" id="MKW-jJ-Qqv"/>
+                            <barButtonItem title="Ajustar" id="a0r-wT-59R">
+                                <connections>
+                                    <action selector="btnAjustarAction:" destination="BYZ-38-t0r" id="Jcz-dP-OdT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="scale.3d" catalog="system" id="MKW-jJ-Qqv">
+                                <connections>
+                                    <action selector="btnScrollAction:" destination="BYZ-38-t0r" id="x63-8J-606"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pdfView" destination="ViH-r4-3Rs" id="hVP-Da-rFv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +63,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6t0-fV-vUj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jwX-Gf-RTl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -86,7 +102,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
