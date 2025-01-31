@@ -29,12 +29,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnOrientacionAction(_ sender: Any) {
+        paginacion = !paginacion
+        //paginación, al hacer scroll carga la página completa y no por partes de la pàgina
+        pdfLector.usePageViewController(paginacion)
     }
     
     @IBAction func btnAjustarAction(_ sender: Any) {
+        autoescala = !autoescala
+        pdfLector.autoScales = autoescala
     }
     
     @IBAction func btnScrollAction(_ sender: UIBarButtonItem) {
+        displayDireccion = !displayDireccion
+        //cambiar de vista horizontal a vertical
+        pdfLector.displayDirection = displayDireccion ? .horizontal : .vertical
     }
     
     func visualizar() {
